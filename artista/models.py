@@ -9,9 +9,9 @@ class Artista(models.Model):
         ("Solo", "Solo"),
     )
 
-    tipo_de_música = models.CharField(max_length=30, choices=tp,default="Solo")
-    quantidade_de_músicas_lançadas = models.IntegerField()
-    ano_do_primeiro_lançamento = models.IntegerField()
+    tipo_de_musica = models.CharField(max_length=30, choices=tp,default="Solo")
+    quantidade_de_músicas_lancadas = models.IntegerField()
+    ano_do_primeiro_lancamento = models.IntegerField()
     foto = models.ImageField(null=True, blank=True)
 
     def __str__(self):

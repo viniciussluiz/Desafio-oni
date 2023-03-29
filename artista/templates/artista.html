@@ -9,8 +9,8 @@
             <tr>
                 <th scope="col">Nome</th>
                 <th scope="col">Tipo</th>
-                <th scope="col">Quantidade de músicas</th>
-                <th scope="col">Ano do primeiro lançamento</th>
+                <th scope="col">Quantidade de musicas</th>
+                <th scope="col">Ano do primeiro lancamento</th>
                 <th scope="col">Foto do perfil</th>
                 <th scope="col">Actions</th>
             </tr>
@@ -19,9 +19,9 @@
                 {% for artista in artistas %}
             <tr>
                 <td>{{ artista.nome }}</td>
-                <td>{{ artista.tipo_de_música }}</td>
-                <td>{{ artista.quantidade_de_músicas_lançadas }}</td>
-                <td>{{ artista.ano_do_primeiro_lançamento }}</td>
+                <td>{{ artista.tipo_de_musica }}</td>
+                <td>{{ artista.quantidade_de_musicas_lancadas }}</td>
+                <td>{{ artista.ano_do_primeiro_lancamento }}</td>
                 <td><img src="{{ artista.foto }}" height="100"/></td>      
                 <td><a class="btn btn-primary" href="{% url 'update_artista' artista.id %}">Editar</a>
                 <a class="btn btn-secondary" href="{% url 'list_musica' artista.id %}">Ver músicas</a></td>

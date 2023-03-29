@@ -5,7 +5,7 @@ from .models import Musica
 class ArtistaForm(forms.ModelForm):
     class Meta:
         model = Artista
-        fields = ['nome', 'tipo_de_música', 'quantidade_de_músicas_lançadas', 'ano_do_primeiro_lançamento', 'foto']
+        fields = ['nome', 'tipo_de_musica', 'quantidade_de_músicas_lancadas', 'ano_do_primeiro_lancamento', 'foto']
         
 class MusicaForm(forms.ModelForm):
     class Meta:

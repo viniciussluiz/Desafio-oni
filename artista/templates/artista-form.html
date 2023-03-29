@@ -16,7 +16,7 @@
             {{ form.ano_do_primeiro_lançamento |as_crispy_field  }}
           </div>
           <div class="form-group">
-            {{ form.foto_de_perfil  }}
+            {{ form.foto |as_crispy_field }}
           </div>
           <button type="submit" class="btn btn-success">Salvar</button>
             {% if artista %}
