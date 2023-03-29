@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+      <form method="POST" novalidate>
+        {% csrf_token %}
+        <div class="form-group">
+          {{ form.nome_musica |as_crispy_field }}
+        </div>
+          <div class="form-group">
+            {{ form.estilo |as_crispy_field }}
+          </div>
+          <div class="form-group">
+            {{ form.tempo_duracao |as_crispy_field  }}
+          </div>
+          <div class="form-group">
+            {{ form.artista |as_crispy_field  }}
+          </div>
+          <button type="submit" class="btn btn-success">Salvar</button>
+            {% if musica %}
+                 <a href="{% url 'delete_musica' musica.id %}" class="btn btn-danger">Excluir</a>
+            {% endif %}
+          <a class="btn btn-light" href="{% url 'list_musicas' %}">Cancelar</a>
+      </form>
+{% endblock %}

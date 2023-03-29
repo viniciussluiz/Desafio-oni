@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+<h1 class="mt-2">Músicas</h1>
+<div class="container">
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Estilo</th>
+                <th scope="col">Tempo</th>
+                <th scope="col">Artista</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tfoot>
+                {% for musica in musicas %}
+            <tr>
+                <td>{{ musica.nome_musica }}</td>
+                <td>{{ musica.estilo }}</td>
+                <td>{{ musica.tempo_duracao }}</td>
+                <td>{{ musica.artista }}</td>
+                <td><a class="btn btn-primary" href="{% url 'editar_musica' musica.id %}">Editar</a></td>
+            </tr>
+            {% endfor %}
+            </tfoot>
+        </table>
+        <a class="btn btn-success" href="{% url 'create_musica' %}">Criar música nova</a>
+        <a class="btn btn-dark" href="{% url 'list_artista' %}">Voltar para tela de artistas</a>
+        {% endblock %}

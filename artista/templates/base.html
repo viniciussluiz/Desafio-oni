@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/11/11178.png" type="image/m-icon">
+    <title>Artista</title>
+    <style>
+
+      body {
+        background-color:#C9D1D1;
+      }
+
+      h1 {
+          color: #434A4A;
+          text-align: center;
+      }
+  
+     .container {
+      padding: 2rem 0rem;
+    }
+    
+    thead, tfoot {
+        background-color: rgb(240, 235, 235);
+    }
+    
+    thead > tr > th {
+        position: sticky;
+        top: -1px;
+        background-color: white;
+    }
+    
+    td > a {
+        margin: 10px;
+    }
+  
+    .btn-dark {
+      margin-left: 850px;
+    }
+  </style>
+    {% block head %}
+    <form method="POST" enctype="multipart/form"></form>
+    {% csrf_token %}
+    
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <hr class="mt-0 mb-4">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
