@@ -10,7 +10,7 @@ class Artista(models.Model):
     )
 
     tipo_de_musica = models.CharField(max_length=30, choices=tp,default="Solo")
-    quantidade_de_músicas_lancadas = models.IntegerField()
+    quantidade_de_musicas_lancadas = models.IntegerField()
     ano_do_primeiro_lancamento = models.IntegerField()
     foto = models.ImageField(null=True, blank=True)
 
