@@ -1,6 +1,6 @@
 # Desafio-oni
 
-<img src="https://cdn-icons-png.flaticon.com/512/11/11178.png" width="100">
+<img src="https://cdn-icons-png.flaticon.com/512/11/11178.png" width="350">
  
 Usando o Django, este desafio apresenta:
 
